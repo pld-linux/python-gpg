@@ -134,20 +134,21 @@ class EncryptedMessage:
     def END_ENCRYPTION(self, value):
         pass
 
-class DecryptedMessage:
+class DecryptedMessage(object):
     ''' Handle a --decrypt command
     '''
     def __init__(self):
 	self.data = ''
 
-    def decrypt_handle(self, name):
-	def decrypt_handle_main(*args, **kwargs):
-	    print name,args,kwargs
-        return decrypt_handle_main
+    def empty(self,name):
+	pass
 
     def __getattr__(self,name):
-        self.decrypt_handle(name)
-	
+	try:
+	    return object.__getattr__(self,name)
+	except AttributeError:
+	    return self.empty
+
 class GPGSubprocess:
 
     # Default path used for searching for the GPG binary, when the
