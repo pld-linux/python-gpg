@@ -140,6 +140,9 @@ class DecryptedMessage(object):
     def __init__(self):
 	self.data = ''
 
+    def DECRYPTION_FAILED(self,value):
+	raise ValueError, "Decryption failed"
+
     def empty(self,name):
 	pass
 
