@@ -11,7 +11,6 @@ Group:		Libraries/Python
 Source0:	GPG.py
 # NoSource0-md5:	a665162fdd1a485ad6c5ac2551e12d0e
 URL:		http://www.python.org/moin/GnuPrivacyGuard
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
