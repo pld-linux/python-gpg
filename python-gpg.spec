@@ -12,7 +12,7 @@ Source0:	GPG.py
 # Source0-md5:	a665162fdd1a485ad6c5ac2551e12d0e
 URL:		http://www.python.org/moin/GnuPrivacyGuard
 BuildRequires:	rpm-pythonprov
-Requires:	python-modules
+%pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -20,7 +20,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 GnuPG interface for Python.
 
 %description -l pl
-Interfejs do GnuPG dla Python.
+Interfejs do GnuPG dla Pythona.
 
 %prep
 %setup -q -c -T
