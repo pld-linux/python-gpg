@@ -134,6 +134,20 @@ class EncryptedMessage:
     def END_ENCRYPTION(self, value):
         pass
 
+class DecryptedMessage:
+    ''' Handle a --decrypt command
+    '''
+    def __init__(self):
+	self.data = ''
+
+    def decrypt_handle(self, name):
+	def decrypt_handle_main(*args, **kwargs):
+	    print name,args,kwargs
+        return decrypt_handle_main
+
+    def __getattr__(self,name):
+        self.decrypt_handle(name)
+	
 class GPGSubprocess:
 
     # Default path used for searching for the GPG binary, when the
@@ -314,12 +328,15 @@ class GPGSubprocess:
 
     def decrypt_file(self, file):
         "Decrypt the message read from the file-like object 'file'"
-        pass
+	args = ['--decrypt --armor']
+	result = DecryptedMessage()
+	self._handle_gigo(args, file, result)
+	return result
 
     def decrypt(self, data):
         "Decrypt the message contained in the string 'data'"
-        pass
-
+	file = StringIO.StringIO(data)
+	return self.decrypt_file(file)
     
 if __name__ == '__main__':
     import sys
