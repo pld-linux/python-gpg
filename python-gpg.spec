@@ -9,7 +9,7 @@ License:	GPL
 Group:		Libraries/Python
 # http://cvs.sourceforge.net/viewcvs.py/pycrypto/gpg/GPG.py
 Source0:	GPG.py
-# Source0-md5:	a665162fdd1a485ad6c5ac2551e12d0e
+# NoSource0-md5:	a665162fdd1a485ad6c5ac2551e12d0e
 URL:		http://www.python.org/moin/GnuPrivacyGuard
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
