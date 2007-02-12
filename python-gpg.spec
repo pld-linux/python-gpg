@@ -1,6 +1,6 @@
 %define		module	gpg
 Summary:	A Python module for the GnuPG
-Summary(pl):	Modu≥ Pythona do GnuPG
+Summary(pl.UTF-8):   Modu≈Ç Pythona do GnuPG
 Name:		python-%{module}
 # it's cvs revision number
 Version:	1.3
@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 GnuPG interface for Python.
 
-%description -l pl
+%description -l pl.UTF-8
 Interfejs do GnuPG dla Pythona.
 
 %prep
