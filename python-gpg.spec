@@ -1,6 +1,6 @@
 %define		module	gpg
 Summary:	A Python module for the GnuPG
-Summary(pl.UTF-8):   Moduł Pythona do GnuPG
+Summary(pl.UTF-8):	Moduł Pythona do GnuPG
 Name:		python-%{module}
 # it's cvs revision number
 Version:	1.3
