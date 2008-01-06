@@ -4,7 +4,7 @@ Summary(pl.UTF-8):	Moduł Pythona do GnuPG
 Name:		python-%{module}
 # it's cvs revision number
 Version:	1.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 # http://cvs.sourceforge.net/viewcvs.py/pycrypto/gpg/GPG.py
@@ -26,16 +26,15 @@ Interfejs do GnuPG dla Pythona.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitedir}
-
-install %{SOURCE0} $RPM_BUILD_ROOT%{py_sitedir}
-
-%py_comp $RPM_BUILD_ROOT%{py_sitedir}
-%py_ocomp $RPM_BUILD_ROOT%{py_sitedir}
+install -d $RPM_BUILD_ROOT%{py_sitescriptdir}
+install %{SOURCE0} $RPM_BUILD_ROOT%{py_sitescriptdir}
+%py_comp $RPM_BUILD_ROOT%{py_sitescriptdir}
+%py_ocomp $RPM_BUILD_ROOT%{py_sitescriptdir}
+%py_postclean
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitedir}/*.py?
+%{py_sitescriptdir}/*.py[co]
