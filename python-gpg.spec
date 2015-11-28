@@ -4,7 +4,7 @@ Summary(pl.UTF-8):	Moduł Pythona do GnuPG
 Name:		python-%{module}
 # it's cvs revision number
 Version:	1.3
-Release:	5
+Release:	6
 License:	GPL
 Group:		Libraries/Python
 # http://cvs.sourceforge.net/viewcvs.py/pycrypto/gpg/GPG.py
